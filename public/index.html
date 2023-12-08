@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Tracker</title>
+  <style>
+    img {
+      height: 15rem;
+    }
+
+    sup {
+      color: red;
+    }
+
+    form,
+    ul {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      border: 0.1rem solid #000;
+    }
+
+    form {
+      flex-direction: column;
+      width: fit-content;
+    }
+
+    #pet-list {
+      flex-wrap: wrap;
+      list-style: none;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Pet Tracker</h1>
+  </header>
+
+  <main>
+    <form id="pet-form">
+      <h2>Add a new Pet!</h2>
+      <label>
+        Pet Name:<sup>*</sup>
+        <input type="text" name="name" maxlength="50" required>
+      </label>
+      <label>
+        Profile Picture<sup>*</sup>
+        <input type="text" name="picture" placeholder="Picture URL" required>
+      </label>
+
+      <fieldset>
+        <legend>Species<sup>*</sup></legend>
+
+        <label>
+          <input type="radio" name="species" value="cat" required>
+          Cat
+        </label>
+        <label>
+          <input type="radio" name="species" value="dog" required>
+          Dog
+        </label>
+        <label>
+          <input type="radio" name="species" value="bird" required>
+          Bird
+        </label>
+
+      </fieldset>
+
+      <label>
+        <input type="checkbox" name="friendly">
+        Are They Friendly?
+      </label>
+
+      <button>Add Pet!</button>
+    </form>
+
+    <h2>Pet List</h2>
+    <ul id="pet-list"></ul>
+  </main>
+
+</body>
+
+</html>
